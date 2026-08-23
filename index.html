@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>2 DAYS KIDS | Empowering Children. Building Brighter Futures.</title>
+  <title>2 DAYS KIDS | Nonprofit Organization</title>
 
   <meta
     name="description"
-    content="2 DAYS KIDS is a nonprofit organization based in Plano, Texas. Learn about our mission, programs, ways to get involved, and how to support our work."
-  />
+    content="2 DAYS KIDS is a nonprofit organization based in Plano, Texas. Learn about our organization, mission, programs, community involvement, transparency, and ways to support our work."
+  >
 
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#12372A" />
+  <meta
+    name="keywords"
+    content="2 DAYS KIDS, nonprofit, nonprofit organization, Plano Texas nonprofit, children nonprofit, children's charity, Texas nonprofit"
+  >
+
+  <meta name="author" content="2 DAYS KIDS">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#12372A">
+
+  <link rel="canonical" href="https://YOUR-DOMAIN.org/">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="2 DAYS KIDS | Empowering Children. Building Brighter Futures." />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="2 DAYS KIDS | Nonprofit Organization">
   <meta
     property="og:description"
-    content="Learn about 2 DAYS KIDS, our mission, programs, community involvement, and ways to support our nonprofit work."
-  />
+    content="Learn about 2 DAYS KIDS, our nonprofit organization, charitable mission, programs, community involvement, and ways to support our work."
+  >
+  <meta property="og:url" content="https://YOUR-DOMAIN.org/">
+  <meta property="og:site_name" content="2 DAYS KIDS">
 
-  <!-- =========================================================
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="2 DAYS KIDS | Nonprofit Organization">
+  <meta
+    name="twitter:description"
+    content="Learn about 2 DAYS KIDS and our nonprofit work in the community."
+  >
+
+  <!-- ==========================================================
        GOOGLE ADS / GTAG
-       ========================================================= -->
+       ========================================================== -->
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16765117729"></script>
 
@@ -47,27 +65,41 @@
     });
   </script>
 
-  <!-- Event snippet for Page view (7) conversion page -->
+  <!--
+    Event snippet for Page view (7) conversion page
+
+    In your html page, add the snippet and call
+    gtag_report_conversion when someone clicks
+    on the chosen link or button.
+  -->
+
   <script>
     function gtag_report_conversion(url) {
+
       var callback = function () {
+
         if (typeof(url) != 'undefined') {
           window.location = url;
         }
+
       };
 
       gtag('event', 'conversion', {
+
         'send_to': 'AW-16765117729/eUTwCIjkz-YcEKHKnbo-',
+
         'event_callback': callback
+
       });
 
       return false;
     }
   </script>
 
-  <!-- =========================================================
+
+  <!-- ==========================================================
        STRUCTURED DATA
-       ========================================================= -->
+       ========================================================== -->
 
   <script type="application/ld+json">
   {
@@ -75,6 +107,7 @@
     "@type": "NGO",
     "name": "2 DAYS KIDS",
     "taxID": "47-1837827",
+    "url": "https://YOUR-DOMAIN.org/",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "2600 K Ave Ste 132",
@@ -86,32 +119,54 @@
   }
   </script>
 
-  <style>
-    /* =========================================================
-       RESET
-       ========================================================= */
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <style>
+
+    /* ==========================================================
+       DESIGN SYSTEM
+       ========================================================== */
 
     :root {
-      --green: #12372a;
-      --green-2: #1d5c45;
-      --green-3: #2d7b5b;
-      --cream: #f8f5ed;
-      --cream-2: #fffdf8;
-      --gold: #e5a93d;
-      --orange: #ed7c35;
-      --text: #193128;
-      --muted: #65766e;
-      --border: #dfe6df;
-      --white: #ffffff;
-      --shadow: 0 18px 50px rgba(18, 55, 42, 0.10);
-      --radius: 22px;
-      --max: 1180px;
+
+      --forest: #12372A;
+      --forest-dark: #0B251C;
+      --forest-light: #2C7457;
+
+      --sage: #E8F0EB;
+      --cream: #F8F5ED;
+      --cream-dark: #EFE8D9;
+
+      --orange: #E97835;
+      --gold: #E4A63A;
+
+      --white: #FFFFFF;
+      --black: #17231E;
+
+      --text: #25382F;
+      --muted: #69776F;
+
+      --border: #DCE5DE;
+
+      --shadow:
+        0 20px 60px rgba(18, 55, 42, .10);
+
+      --radius-lg: 32px;
+      --radius-md: 20px;
+      --radius-sm: 14px;
+
+      --container: 1180px;
+
+    }
+
+
+    /* ==========================================================
+       RESET
+       ========================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -119,27 +174,33 @@
     }
 
     body {
+
       font-family:
         Inter,
-        ui-sans-serif,
-        system-ui,
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
+        Roboto,
+        Arial,
         sans-serif;
-      color: var(--text);
-      background: var(--cream-2);
-      line-height: 1.65;
-    }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+      background: var(--cream);
+      color: var(--text);
+
+      line-height: 1.7;
+
+      overflow-x: hidden;
+
     }
 
     img {
       max-width: 100%;
       display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     button,
@@ -149,190 +210,228 @@
       font: inherit;
     }
 
-    .container {
-      width: min(100% - 40px, var(--max));
-      margin-inline: auto;
+    button {
+      cursor: pointer;
     }
 
-    /* =========================================================
-       HEADER
-       ========================================================= */
+    .container {
+
+      width:
+        min(
+          calc(100% - 40px),
+          var(--container)
+        );
+
+      margin: auto;
+
+    }
+
+
+    /* ==========================================================
+       ACCESSIBILITY
+       ========================================================== */
+
+    .skip-link {
+
+      position: fixed;
+
+      left: 15px;
+      top: -100px;
+
+      background: var(--forest);
+      color: white;
+
+      padding: 12px 18px;
+
+      border-radius: 8px;
+
+      z-index: 9999;
+
+    }
+
+    .skip-link:focus {
+      top: 15px;
+    }
+
+
+    /* ==========================================================
+       TOP INFORMATION BAR
+       ========================================================== */
 
     .topbar {
-      background: var(--green);
-      color: white;
-      font-size: 13px;
+
+      background: var(--forest-dark);
+      color: rgba(255,255,255,.78);
+
+      font-size: 12px;
+
     }
 
     .topbar-inner {
+
       min-height: 38px;
+
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+
       gap: 20px;
+
     }
 
     .topbar strong {
-      color: #fff;
+      color: white;
     }
 
+
+    /* ==========================================================
+       HEADER
+       ========================================================== */
+
     header {
+
       position: sticky;
       top: 0;
-      z-index: 1000;
-      background: rgba(255, 253, 248, 0.94);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(223, 230, 223, 0.8);
+      z-index: 5000;
+
+      background:
+        rgba(255,255,255,.94);
+
+      backdrop-filter: blur(18px);
+
+      border-bottom:
+        1px solid rgba(220,229,222,.85);
+
     }
 
     .nav {
+
       height: 82px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 30px;
+
     }
 
-    .logo {
+    .brand {
+
       display: flex;
       align-items: center;
       gap: 12px;
+
+      color: var(--forest);
+
       font-weight: 900;
-      letter-spacing: -0.04em;
-      color: var(--green);
+
     }
 
-    .logo-mark {
+    .brand-symbol {
+
       width: 45px;
       height: 45px;
+
       border-radius: 14px;
+
       display: grid;
       place-items: center;
+
+      background: var(--forest);
       color: white;
-      background: var(--green);
-      font-size: 17px;
-      box-shadow: 0 8px 20px rgba(18, 55, 42, 0.18);
+
+      font-size: 15px;
+      font-weight: 900;
+
     }
 
-    .logo-text {
-      font-size: 19px;
+    .brand-name {
+
+      font-size: 18px;
+      letter-spacing: -.04em;
+
     }
 
     .nav-links {
+
       display: flex;
       align-items: center;
-      gap: 27px;
+
+      gap: 23px;
+
       list-style: none;
+
     }
 
     .nav-links a {
-      font-size: 14px;
-      font-weight: 700;
-      color: #3e5048;
-      transition: 0.2s ease;
+
+      font-size: 13px;
+
+      font-weight: 750;
+
+      color: #42534B;
+
+      transition: .2s ease;
+
     }
 
     .nav-links a:hover {
-      color: var(--green-3);
+      color: var(--forest-light);
     }
 
     .nav-donate {
-      padding: 12px 20px;
-      border-radius: 999px;
-      background: var(--green);
+
+      background: var(--forest);
+
       color: white !important;
+
+      padding:
+        11px 19px;
+
+      border-radius: 999px;
+
     }
 
-    .menu-btn {
+    .menu-toggle {
+
       display: none;
+
       border: 0;
       background: transparent;
-      font-size: 26px;
-      cursor: pointer;
-      color: var(--green);
+
+      color: var(--forest);
+
+      font-size: 28px;
+
     }
 
-    /* =========================================================
-       HERO
-       ========================================================= */
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 90% 10%, rgba(229, 169, 61, 0.22), transparent 28%),
-        radial-gradient(circle at 10% 80%, rgba(45, 123, 91, 0.13), transparent 30%),
-        var(--cream);
-      padding: 100px 0 110px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 13px;
-      border-radius: 999px;
-      background: #e7efe9;
-      color: var(--green-2);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--gold);
-    }
-
-    h1 {
-      font-size: clamp(48px, 7vw, 82px);
-      line-height: 0.98;
-      letter-spacing: -0.065em;
-      color: var(--green);
-      margin-bottom: 27px;
-    }
-
-    .hero h1 span {
-      color: var(--orange);
-    }
-
-    .hero-copy {
-      max-width: 650px;
-      font-size: 18px;
-      color: var(--muted);
-      margin-bottom: 32px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-    }
+    /* ==========================================================
+       BUTTONS
+       ========================================================== */
 
     .btn {
+
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
+
       min-height: 52px;
-      padding: 0 24px;
+
+      padding:
+        0 24px;
+
       border-radius: 999px;
-      font-weight: 800;
+
       font-size: 14px;
+      font-weight: 800;
+
       border: 1px solid transparent;
-      cursor: pointer;
-      transition: 0.2s ease;
+
+      transition: .2s ease;
+
     }
 
     .btn:hover {
@@ -340,444 +439,4812 @@
     }
 
     .btn-primary {
-      background: var(--green);
+
+      background: var(--forest);
       color: white;
-      box-shadow: 0 12px 25px rgba(18, 55, 42, 0.18);
+
+      box-shadow:
+        0 12px 25px rgba(18,55,42,.16);
+
     }
 
     .btn-secondary {
+
       background: white;
-      color: var(--green);
-      border-color: var(--border);
+
+      color: var(--forest);
+
+      border-color:
+        var(--border);
+
     }
 
-    .hero-art {
-      min-height: 500px;
-      border-radius: 40px;
-      background:
-        linear-gradient(135deg, rgba(18,55,42,.95), rgba(45,123,91,.87)),
-        url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80")
-        center/cover;
+    .btn-orange {
+
+      background: var(--orange);
+      color: white;
+
+    }
+
+
+    /* ==========================================================
+       HERO
+       ========================================================== */
+
+    .hero {
+
       position: relative;
+
+      padding:
+        110px 0
+        100px;
+
       overflow: hidden;
-      box-shadow: var(--shadow);
+
+      background:
+
+        radial-gradient(
+          circle at 85% 10%,
+          rgba(228,166,58,.18),
+          transparent 28%
+        ),
+
+        radial-gradient(
+          circle at 5% 90%,
+          rgba(44,116,87,.15),
+          transparent 30%
+        ),
+
+        var(--cream);
+
     }
 
-    .hero-art::after {
+    .hero-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1.08fr
+        .92fr;
+
+      align-items: center;
+
+      gap: 75px;
+
+    }
+
+    .eyebrow {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      background: var(--sage);
+
+      color: var(--forest);
+
+      padding:
+        7px 13px;
+
+      border-radius: 999px;
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+
+      margin-bottom: 23px;
+
+    }
+
+    .eyebrow::before {
+
       content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        180deg,
-        transparent 20%,
-        rgba(18,55,42,.65) 100%
-      );
+
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: var(--orange);
+
     }
 
-    .hero-card {
+    h1 {
+
+      font-size:
+        clamp(48px, 7vw, 82px);
+
+      line-height: .98;
+
+      letter-spacing:
+        -.065em;
+
+      color: var(--forest);
+
+      margin-bottom: 25px;
+
+    }
+
+    h1 span {
+      color: var(--orange);
+    }
+
+    .hero-description {
+
+      max-width: 680px;
+
+      color: var(--muted);
+
+      font-size: 18px;
+
+      margin-bottom: 31px;
+
+    }
+
+    .hero-actions {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+    }
+
+    .hero-visual {
+
+      min-height: 510px;
+
+      border-radius:
+        42px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          rgba(18,55,42,.93),
+          rgba(44,116,87,.80)
+        );
+
+      box-shadow:
+        var(--shadow);
+
+    }
+
+    .hero-visual::before {
+
+      content: "";
+
       position: absolute;
-      z-index: 2;
-      bottom: 28px;
+
+      inset: 0;
+
+      background:
+        url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1400&q=82")
+        center / cover;
+
+      opacity: .65;
+
+      mix-blend-mode: overlay;
+
+    }
+
+    .hero-visual::after {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent 25%,
+          rgba(7,30,22,.88)
+        );
+
+    }
+
+    .hero-message {
+
+      position: absolute;
+
       left: 28px;
       right: 28px;
-      padding: 23px;
-      border-radius: 22px;
-      background: rgba(255,255,255,.93);
-      backdrop-filter: blur(12px);
+      bottom: 28px;
+
+      z-index: 2;
+
+      padding: 25px;
+
+      border-radius: 23px;
+
+      background:
+        rgba(255,255,255,.94);
+
+      backdrop-filter: blur(15px);
+
     }
 
-    .hero-card strong {
+    .hero-message strong {
+
       display: block;
-      font-size: 20px;
-      color: var(--green);
-      margin-bottom: 5px;
+
+      font-size: 21px;
+
+      color: var(--forest);
+
+      margin-bottom: 4px;
+
     }
 
-    .hero-card p {
+    .hero-message p {
+
+      font-size: 13px;
+
       color: var(--muted);
-      font-size: 14px;
+
     }
 
-    /* =========================================================
-       TRUST BAR
-       ========================================================= */
 
-    .trust {
-      padding: 25px 0;
-      background: var(--green);
+    /* ==========================================================
+       TRUST / IDENTITY
+       ========================================================== */
+
+    .identity {
+
+      background: var(--forest);
+
       color: white;
+
     }
 
-    .trust-grid {
+    .identity-grid {
+
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+    }
+
+    .identity-item {
+
       text-align: center;
+
+      padding: 25px;
+
+      border-right:
+        1px solid rgba(255,255,255,.13);
+
     }
 
-    .trust-item {
-      padding: 8px 20px;
-      border-right: 1px solid rgba(255,255,255,.15);
-    }
-
-    .trust-item:last-child {
+    .identity-item:last-child {
       border-right: 0;
     }
 
-    .trust-label {
-      font-size: 11px;
-      opacity: .65;
+    .identity-label {
+
+      color:
+        rgba(255,255,255,.52);
+
       text-transform: uppercase;
-      letter-spacing: .1em;
-      font-weight: 800;
+
+      letter-spacing: .12em;
+
+      font-size: 10px;
+
+      font-weight: 900;
+
     }
 
-    .trust-value {
-      margin-top: 3px;
+    .identity-value {
+
+      margin-top: 5px;
+
       font-size: 15px;
+
       font-weight: 800;
+
     }
 
-    /* =========================================================
-       GENERAL SECTIONS
-       ========================================================= */
+
+    /* ==========================================================
+       SECTIONS
+       ========================================================== */
 
     section {
       padding: 100px 0;
     }
 
-    .section-header {
-      max-width: 720px;
-      margin-bottom: 50px;
-    }
-
-    .section-header.center {
-      text-align: center;
-      margin-inline: auto;
-    }
-
     .section-kicker {
+
       color: var(--orange);
-      font-size: 12px;
+
+      font-size: 11px;
+
       font-weight: 900;
-      letter-spacing: .12em;
+
+      letter-spacing: .13em;
+
       text-transform: uppercase;
+
       margin-bottom: 12px;
+
     }
 
     h2 {
-      font-size: clamp(35px, 5vw, 56px);
+
+      color: var(--forest);
+
+      font-size:
+        clamp(35px,5vw,56px);
+
       line-height: 1.05;
-      letter-spacing: -0.055em;
-      color: var(--green);
+
+      letter-spacing:
+        -.055em;
+
       margin-bottom: 17px;
+
     }
 
-    .section-header p {
+    .section-intro {
+
       color: var(--muted);
+
       font-size: 17px;
+
+      max-width: 720px;
+
     }
 
-    /* =========================================================
-       MISSION
-       ========================================================= */
+    .section-header {
 
-    .mission {
+      margin-bottom: 50px;
+
+    }
+
+    .section-header.center {
+
+      text-align: center;
+
+      max-width: 760px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+
+    /* ==========================================================
+       ABOUT
+       ========================================================== */
+
+    .about {
+
       background: white;
+
     }
 
-    .mission-grid {
+    .about-grid {
+
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        .9fr
+        1.1fr;
+
       gap: 70px;
+
       align-items: center;
+
     }
 
-    .mission-image {
+    .about-photo {
+
       min-height: 510px;
+
       border-radius: 35px;
+
       background:
-        url("https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1000&q=80")
-        center/cover;
-      box-shadow: var(--shadow);
+
+        linear-gradient(
+          rgba(18,55,42,.05),
+          rgba(18,55,42,.05)
+        ),
+
+        url("https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1200&q=82")
+        center / cover;
+
+      box-shadow:
+        var(--shadow);
+
     }
 
-    .mission-content p {
+    .about-content p {
+
       color: var(--muted);
-      margin-bottom: 22px;
+
+      margin-bottom: 19px;
+
     }
 
-    .check-list {
+    .feature-list {
+
       display: grid;
+
       gap: 14px;
-      margin: 30px 0;
+
       list-style: none;
+
+      margin:
+        27px 0
+        31px;
+
     }
 
-    .check-list li {
+    .feature-list li {
+
       display: flex;
-      gap: 12px;
+
       align-items: flex-start;
+
+      gap: 12px;
+
       font-weight: 700;
+
     }
 
-    .check {
-      flex: 0 0 25px;
+    .feature-icon {
+
+      flex:
+        0 0 25px;
+
       width: 25px;
       height: 25px;
-      border-radius: 50%;
+
       display: grid;
       place-items: center;
-      background: #e7efe9;
-      color: var(--green);
-      font-size: 13px;
-      font-weight: 900;
+
+      border-radius: 50%;
+
+      background: var(--sage);
+
+      color: var(--forest);
+
+      font-size: 12px;
+
     }
 
-    /* =========================================================
+
+    /* ==========================================================
+       MISSION
+       ========================================================== */
+
+    .mission {
+
+      background: var(--cream);
+
+    }
+
+    .mission-box {
+
+      padding: 60px;
+
+      background: var(--forest);
+
+      color: white;
+
+      border-radius: 35px;
+
+      position: relative;
+
+      overflow: hidden;
+
+    }
+
+    .mission-box::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 350px;
+      height: 350px;
+
+      right: -150px;
+      top: -150px;
+
+      border-radius: 50%;
+
+      border:
+        70px solid
+        rgba(255,255,255,.05);
+
+    }
+
+    .mission-box h2 {
+      color: white;
+    }
+
+    .mission-box p {
+
+      color:
+        rgba(255,255,255,.72);
+
+      max-width: 800px;
+
+      font-size: 17px;
+
+    }
+
+
+    /* ==========================================================
        PROGRAMS
-       ========================================================= */
+       ========================================================== */
 
     .programs {
-      background: var(--cream);
+
+      background: white;
+
     }
 
     .cards {
+
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3,1fr);
+
       gap: 22px;
+
     }
 
     .card {
-      padding: 32px;
+
       background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: 0 8px 30px rgba(18,55,42,.04);
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius-md);
+
+      padding: 32px;
+
+      transition: .25s ease;
+
     }
 
-    .icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 17px;
+    .card:hover {
+
+      transform:
+        translateY(-5px);
+
+      box-shadow:
+        var(--shadow);
+
+    }
+
+    .card-icon {
+
+      width: 55px;
+      height: 55px;
+
       display: grid;
       place-items: center;
-      background: #e7efe9;
-      color: var(--green);
+
+      border-radius: 17px;
+
+      background: var(--sage);
+
+      color: var(--forest);
+
       font-size: 23px;
-      margin-bottom: 22px;
+
+      margin-bottom: 20px;
+
     }
 
     .card h3 {
-      font-size: 21px;
-      color: var(--green);
-      margin-bottom: 10px;
+
+      color: var(--forest);
+
+      font-size: 20px;
+
+      margin-bottom: 9px;
+
     }
 
     .card p {
+
       color: var(--muted);
+
       font-size: 14px;
+
     }
 
-    .placeholder-note {
-      margin-top: 35px;
-      padding: 18px 20px;
-      border: 1px dashed #c7d2ca;
-      border-radius: 15px;
-      color: var(--muted);
-      background: rgba(255,255,255,.55);
+
+    /* ==========================================================
+       WHO WE SERVE
+       ========================================================== */
+
+    .serve {
+
+      background: var(--cream);
+
+    }
+
+    .serve-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap: 22px;
+
+    }
+
+    .serve-card {
+
+      padding: 30px;
+
+      border-radius: 22px;
+
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+    }
+
+    .serve-number {
+
       font-size: 13px;
+
+      font-weight: 900;
+
+      color: var(--orange);
+
+      margin-bottom: 16px;
+
     }
 
-    /* =========================================================
+    .serve-card h3 {
+
+      color: var(--forest);
+
+      margin-bottom: 9px;
+
+    }
+
+    .serve-card p {
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+    }
+
+
+    /* ==========================================================
        IMPACT
-       ========================================================= */
+       ========================================================== */
 
     .impact {
-      background: var(--green);
+
+      background: var(--forest);
+
       color: white;
+
     }
 
     .impact h2 {
       color: white;
     }
 
-    .impact .section-header p {
-      color: rgba(255,255,255,.7);
+    .impact .section-intro {
+
+      color:
+        rgba(255,255,255,.67);
+
     }
 
     .impact-grid {
+
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3,1fr);
+
       gap: 22px;
+
     }
 
     .impact-card {
-      padding: 30px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      border-radius: 22px;
-    }
 
-    .impact-card .number {
-      font-size: 42px;
-      line-height: 1;
-      font-weight: 900;
-      color: var(--gold);
-      margin-bottom: 12px;
+      padding: 31px;
+
+      border-radius: 22px;
+
+      background:
+        rgba(255,255,255,.055);
+
+      border:
+        1px solid
+        rgba(255,255,255,.12);
+
     }
 
     .impact-card strong {
+
       display: block;
+
       font-size: 18px;
-      margin-bottom: 6px;
+
+      margin-bottom: 7px;
+
     }
 
     .impact-card p {
-      color: rgba(255,255,255,.68);
+
+      color:
+        rgba(255,255,255,.62);
+
       font-size: 14px;
+
     }
 
-    /* =========================================================
+    .impact-icon {
+
+      color: var(--gold);
+
+      font-size: 29px;
+
+      margin-bottom: 14px;
+
+    }
+
+
+    /* ==========================================================
        GET INVOLVED
-       ========================================================= */
+       ========================================================== */
+
+    .involved {
+
+      background: white;
+
+    }
 
     .involved-grid {
+
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        1fr 1fr;
+
       gap: 22px;
+
     }
 
     .involved-card {
-      min-height: 290px;
-      border-radius: 27px;
-      padding: 35px;
+
+      padding: 42px;
+
+      min-height: 310px;
+
       display: flex;
+
       flex-direction: column;
+
       justify-content: flex-end;
-      overflow: hidden;
-      position: relative;
-      background: var(--green);
+
+      border-radius: 30px;
+
+      background: var(--forest);
+
       color: white;
+
+      overflow: hidden;
+
+      position: relative;
+
     }
 
-    .involved-card:nth-child(2) {
-      background:
-        linear-gradient(135deg, rgba(237,124,53,.9), rgba(229,169,61,.8)),
-        url("https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1000&q=80")
-        center/cover;
+    .involved-card.orange {
+
+      background: var(--orange);
+
     }
 
     .involved-card h3 {
-      font-size: 28px;
-      margin-bottom: 7px;
+
+      font-size: 30px;
+
+      margin-bottom: 8px;
+
       position: relative;
+
       z-index: 2;
+
     }
 
     .involved-card p {
-      color: rgba(255,255,255,.78);
+
+      color:
+        rgba(255,255,255,.76);
+
       max-width: 500px;
+
       position: relative;
+
       z-index: 2;
+
     }
 
     .involved-card .btn {
-      margin-top: 20px;
+
+      margin-top: 21px;
+
       align-self: flex-start;
+
       background: white;
-      color: var(--green);
+
+      color: var(--forest);
+
       position: relative;
+
       z-index: 2;
+
     }
 
-    /* =========================================================
+
+    /* ==========================================================
        DONATE
-       ========================================================= */
+       ========================================================== */
 
     .donate {
-      background: #f1eadb;
+
+      background:
+        var(--cream-dark);
+
     }
 
     .donate-box {
+
       background: white;
-      border-radius: 32px;
+
+      border-radius: 35px;
+
       padding: 60px;
-      box-shadow: var(--shadow);
+
       display: grid;
-      grid-template-columns: 1.2fr .8fr;
+
+      grid-template-columns:
+        1.1fr
+        .9fr;
+
       gap: 60px;
+
       align-items: center;
+
+      box-shadow: var(--shadow);
+
     }
 
     .donate-box p {
+
       color: var(--muted);
+
       margin-bottom: 25px;
+
     }
 
-    .donation-options {
+    .donation-benefits {
+
       display: grid;
+
       gap: 12px;
+
     }
 
-    .donation-option {
-      padding: 19px;
-      border: 1px solid var(--border);
-      border-radius: 15px;
+    .donation-benefit {
+
       display: flex;
-      justify-content: space-between;
-      gap: 20px;
+
+      gap: 13px;
+
+      align-items: flex-start;
+
+      padding: 16px;
+
+      border-radius: 15px;
+
+      background: var(--sage);
+
     }
 
-    .donation-option strong {
-      color: var(--green);
+    .donation-benefit strong {
+
+      color: var(--forest);
+
+      display: block;
+
     }
 
-    .donation-option span {
+    .donation-benefit span {
+
       color: var(--muted);
+
       font-size: 13px;
+
     }
 
-    /* =========================================================
+
+    /* ==========================================================
        TRANSPARENCY
-       ========================================================= */
+       ========================================================== */
 
     .transparency {
+
       background: white;
+
     }
 
     .transparency-grid {
+
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        1fr 1fr;
+
       gap: 22px;
+
     }
 
-    .info-panel {
-      border: 1px solid var(--border);
+    .info-box {
+
+      border:
+        1px solid var(--border);
+
       border-radius: 22px;
+
       padding: 30px;
+
     }
 
-    .info-panel h3 {
-      color: var(--green);
-      margin-bottom: 20px;
+    .info-box h3 {
+
+      color: var(--forest);
+
+      margin-bottom: 18px;
+
     }
 
     .info-row {
+
       display: flex;
+
       justify-content: space-between;
-      gap: 20px;
+
+      gap: 25px;
+
       padding: 13px 0;
-      border-bottom: 1px solid #edf0ed;
+
+      border-bottom:
+        1px solid #EDF1ED;
+
       font-size: 14px;
+
     }
 
     .info-row:last-child {
       border-bottom: 0;
     }
 
-    .info-row span:first-child {
+    .info-row span {
       color: var(--muted);
     }
 
     .info-row strong {
+      color: var(--forest);
+      text-align: right;
+    }
+
+
+    /* ==========================================================
+       NEWS
+       ========================================================== */
+
+    .news {
+
+      background: var(--cream);
+
+    }
+
+    .news-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap: 22px;
+
+    }
+
+    .news-card {
+
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 22px;
+
+      overflow: hidden;
+
+    }
+
+    .news-image {
+
+      height: 190px;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          var(--forest),
+          var(--forest-light)
+        );
+
+    }
+
+    .news-content {
+
+      padding: 25px;
+
+    }
+
+    .news-label {
+
+      color: var(--orange);
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      font-weight: 900;
+
+      letter-spacing: .1em;
+
+    }
+
+    .news-card h3 {
+
+      color: var(--forest);
+
+      font-size: 20px;
+
+      margin:
+        8px 0;
+
+    }
+
+    .news-card p {
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+    }
+
+
+    /* ==========================================================
+       FAQ
+       ========================================================== */
+
+    .faq {
+
+      background: white;
+
+    }
+
+    .faq-list {
+
+      max-width: 850px;
+
+      margin: auto;
+
+    }
+
+    details {
+
+      border-bottom:
+        1px solid var(--border);
+
+      padding: 22px 0;
+
+    }
+
+    summary {
+
+      cursor: pointer;
+
+      list-style: none;
+
+      font-weight: 800;
+
+      color: var(--forest);
+
+      display: flex;
+
+      justify-content: space-between;
+
+    }
+
+    summary::after {
+
+      content: "+";
+
+      color: var(--orange);
+
+      font-size: 20px;
+
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+
+      color: var(--muted);
+
+      margin-top: 14px;
+
+      font-size: 14px;
+
+      max-width: 800px;
+
+    }
+
+
+    /* ==========================================================
+       CONTACT
+       ========================================================== */
+
+    .contact {
+
+      background: var(--cream);
+
+    }
+
+    .contact-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        .8fr
+        1.2fr;
+
+      gap: 50px;
+
+    }
+
+    .contact-details {
+
+      display: grid;
+
+      gap: 14px;
+
+    }
+
+    .contact-item {
+
+      background: white;
+
+      padding: 20px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 17px;
+
+    }
+
+    .contact-item small {
+
+      display: block;
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      font-weight: 900;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+
+      margin-bottom: 5px;
+
+    }
+
+    .contact-item strong {
+      color: var(--forest);
+    }
+
+    .contact-form {
+
+      background: white;
+
+      padding: 35px;
+
+      border-radius: 25px;
+
+      border:
+        1px solid var(--border);
+
+    }
+
+    .form-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 15px;
+
+    }
+
+    .field {
+
+      display: grid;
+
+      gap: 7px;
+
+      margin-bottom: 15px;
+
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+
+      color: var(--forest);
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+    }
+
+    input,
+    textarea,
+    select {
+
+      width: 100%;
+
+      padding: 13px 14px;
+
+      border:
+        1px solid var(--border);
+
+      background: #FBFCFA;
+
+      border-radius: 12px;
+
+      color: var(--text);
+
+      outline: none;
+
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+
+      border-color:
+        var(--forest-light);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(44,116,87,.09);
+
+    }
+
+    textarea {
+
+      min-height: 140px;
+
+      resize: vertical;
+
+    }
+
+
+    /* ==========================================================
+       INNER PAGE SYSTEM
+       ========================================================== */
+
+    .site-page {
+      display: none;
+    }
+
+    .site-page.active {
+      display: block;
+    }
+
+    .page-hero {
+
+      background: var(--forest);
+
+      color: white;
+
+      padding: 90px 0;
+
+    }
+
+    .page-hero h1 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .page-hero p {
+
+      color:
+        rgba(255,255,255,.70);
+
+      max-width: 750px;
+
+      font-size: 17px;
+
+    }
+
+    .article {
+
+      max-width: 850px;
+
+      padding:
+        85px 0;
+
+      margin: auto;
+
+    }
+
+    .article h2 {
+
+      font-size: 34px;
+
+      margin-top: 48px;
+
+    }
+
+    .article h2:first-child {
+      margin-top: 0;
+    }
+
+    .article p {
+
+      color: var(--muted);
+
+      margin-bottom: 18px;
+
+    }
+
+    .article ul {
+
+      color: var(--muted);
+
+      padding-left: 22px;
+
+      margin-bottom: 20px;
+
+    }
+
+
+    /* ==========================================================
+       FOOTER
+       ========================================================== */
+
+    footer {
+
+      background:
+        var(--forest-dark);
+
+      color: white;
+
+      padding:
+        65px 0
+        25px;
+
+    }
+
+    .footer-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1.3fr
+        .8fr
+        .8fr
+        .9fr;
+
+      gap: 45px;
+
+      padding-bottom: 45px;
+
+      border-bottom:
+        1px solid
+        rgba(255,255,255,.10);
+
+    }
+
+    footer h3 {
+
+      font-size: 15px;
+
+      margin-bottom: 15px;
+
+    }
+
+    footer p,
+    footer a {
+
+      color:
+        rgba(255,255,255,.58);
+
+      font-size: 13px;
+
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .footer-links {
+
+      list-style: none;
+
+      display: grid;
+
+      gap: 8px;
+
+    }
+
+    .footer-bottom {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding-top: 22px;
+
+      color:
+        rgba(255,255,255,.40);
+
+      font-size: 11px;
+
+    }
+
+
+    /* ==========================================================
+       MOBILE
+       ========================================================== */
+
+    @media(max-width: 950px) {
+
+      .nav-links {
+
+        display: none;
+
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        top: 82px;
+
+        padding: 20px;
+
+        background: white;
+
+        border-bottom:
+          1px solid var(--border);
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .donate-box,
+      .contact-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .cards,
+      .serve-grid,
+      .impact-grid,
+      .news-grid {
+
+        grid-template-columns:
+          repeat(2,1fr);
+
+      }
+
+      .footer-grid {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+    }
+
+
+    @media(max-width: 650px) {
+
+      .container {
+
+        width:
+          calc(100% - 28px);
+
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .topbar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .topbar-inner span:last-child {
+        display: none;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .hero-visual {
+        min-height: 360px;
+      }
+
+      .identity-grid,
+      .cards,
+      .serve-grid,
+      .impact-grid,
+      .involved-grid,
+      .transparency-grid,
+      .news-grid,
+      .footer-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .identity-item {
+
+        border-right: 0;
+
+        border-bottom:
+          1px solid
+          rgba(255,255,255,.13);
+
+      }
+
+      .identity-item:last-child {
+        border-bottom: 0;
+      }
+
+      .mission-box,
+      .donate-box {
+        padding: 32px 23px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ACCESSIBILITY -->
+
+  <a
+    href="#main-content"
+    class="skip-link"
+  >
+    Skip to main content
+  </a>
+
+
+  <!-- ==========================================================
+       TOP BAR
+       ========================================================== -->
+
+  <div class="topbar">
+
+    <div class="container topbar-inner">
+
+      <span>
+        <strong>2 DAYS KIDS</strong>
+        · Nonprofit Organization
+      </span>
+
+      <span>
+        Plano, Texas · EIN 47-1837827
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==========================================================
+       NAVIGATION
+       ========================================================== -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a
+        href="#home"
+        class="brand"
+        onclick="navigate('home')"
+      >
+
+        <span class="brand-symbol">
+          2D
+        </span>
+
+        <span class="brand-name">
+          2 DAYS KIDS
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        onclick="toggleMenu()"
+      >
+        ☰
+      </button>
+
+
+      <nav aria-label="Main navigation">
+
+        <ul
+          class="nav-links"
+          id="navLinks"
+        >
+
+          <li>
+            <a
+              href="#home"
+              onclick="navigate('home')"
+            >
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#about"
+              onclick="navigate('about')"
+            >
+              About
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#mission"
+              onclick="navigate('mission')"
+            >
+              Mission
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#programs"
+              onclick="navigate('programs')"
+            >
+              Programs
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#impact"
+              onclick="navigate('impact')"
+            >
+              Impact
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#involved"
+              onclick="navigate('involved')"
+            >
+              Get Involved
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#contact"
+              onclick="navigate('contact')"
+            >
+              Contact
+            </a>
+          </li>
+
+          <li>
+
+            <a
+              href="#donate"
+              class="nav-donate"
+              onclick="return trackConversion('#donate')"
+            >
+              Donate
+            </a>
+
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ==========================================================
+       MAIN
+       ========================================================== -->
+
+  <main id="main-content">
+
+
+    <!-- ========================================================
+         HOME
+         ======================================================== -->
+
+    <div
+      class="site-page active"
+      id="page-home"
+    >
+
+      <!-- HERO -->
+
+      <section class="hero">
+
+        <div class="container hero-grid">
+
+          <div>
+
+            <div class="eyebrow">
+              Nonprofit organization
+            </div>
+
+            <h1>
+              A nonprofit built around
+              <span>children and community.</span>
+            </h1>
+
+            <p class="hero-description">
+
+              2 DAYS KIDS is a nonprofit organization
+              located in Plano, Texas. Our public website
+              exists to clearly communicate who we are,
+              our charitable purpose, our activities,
+              and ways members of the community can
+              connect with and support our work.
+
+            </p>
+
+            <div class="hero-actions">
+
+              <a
+                href="#about"
+                class="btn btn-primary"
+                onclick="navigate('about')"
+              >
+                Learn About 2 DAYS KIDS
+              </a>
+
+              <a
+                href="#donate"
+                class="btn btn-secondary"
+                onclick="return trackConversion('#donate')"
+              >
+                Support Our Work
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="hero-visual"
+            role="img"
+            aria-label="Children and community"
+          >
+
+            <div class="hero-message">
+
+              <strong>
+                2 DAYS KIDS
+              </strong>
+
+              <p>
+
+                A Plano, Texas nonprofit organization
+                focused on pursuing its charitable purpose
+                and serving the community.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ORGANIZATION IDENTITY -->
+
+      <section class="identity">
+
+        <div class="container identity-grid">
+
+          <div class="identity-item">
+
+            <div class="identity-label">
+              Organization
+            </div>
+
+            <div class="identity-value">
+              2 DAYS KIDS
+            </div>
+
+          </div>
+
+          <div class="identity-item">
+
+            <div class="identity-label">
+              EIN
+            </div>
+
+            <div class="identity-value">
+              47-1837827
+            </div>
+
+          </div>
+
+          <div class="identity-item">
+
+            <div class="identity-label">
+              Location
+            </div>
+
+            <div class="identity-value">
+              Plano, Texas 75074
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ABOUT PREVIEW -->
+
+      <section class="about">
+
+        <div class="container about-grid">
+
+          <div class="about-photo"></div>
+
+
+          <div class="about-content">
+
+            <div class="section-kicker">
+              About the organization
+            </div>
+
+            <h2>
+              Know the organization behind the mission.
+            </h2>
+
+            <p>
+
+              2 DAYS KIDS is a nonprofit organization
+              with an address in Plano, Texas.
+
+              The organization uses this website to make
+              important information about its identity,
+              charitable purpose, activities, community
+              involvement, and contact information
+              accessible to the public.
+
+            </p>
+
+            <p>
+
+              We believe a nonprofit website should make
+              it easy for supporters, volunteers, community
+              members, and other stakeholders to understand
+              who the organization is and how they can
+              participate.
+
+            </p>
+
+
+            <ul class="feature-list">
+
+              <li>
+
+                <span class="feature-icon">
+                  ✓
+                </span>
+
+                <span>
+                  Clear nonprofit identity and contact information
+                </span>
+
+              </li>
+
+              <li>
+
+                <span class="feature-icon">
+                  ✓
+                </span>
+
+                <span>
+                  Public information about our charitable work
+                </span>
+
+              </li>
+
+              <li>
+
+                <span class="feature-icon">
+                  ✓
+                </span>
+
+                <span>
+                  Accessible ways to connect and get involved
+                </span>
+
+              </li>
+
+            </ul>
+
+
+            <a
+              href="#about"
+              class="btn btn-primary"
+              onclick="navigate('about')"
+            >
+              Read More About Us
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- MISSION -->
+
+      <section class="mission">
+
+        <div class="container">
+
+          <div class="mission-box">
+
+            <div class="section-kicker">
+              Our purpose
+            </div>
+
+            <h2>
+              Putting children and community at the center.
+            </h2>
+
+            <p>
+
+              2 DAYS KIDS is organized around a charitable
+              purpose involving children and community
+              support. Our goal with this website is to
+              communicate that purpose clearly while
+              providing useful information for people who
+              want to learn about, support, volunteer with,
+              or contact the organization.
+
+            </p>
+
+            <br>
+
+            <p>
+
+              As our programs develop, this website can
+              provide verified descriptions of our services,
+              beneficiaries, geographic service area,
+              partnerships, activities, and measurable
+              outcomes.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- PROGRAMS -->
+
+      <section class="programs">
+
+        <div class="container">
+
+          <div class="section-header center">
+
+            <div class="section-kicker">
+              Our work
+            </div>
+
+            <h2>
+              Areas of charitable activity.
+            </h2>
+
+            <p class="section-intro">
+
+              The following areas describe the organizational
+              focus represented by this website. Specific
+              program details should always be updated with
+              verified information from 2 DAYS KIDS.
+
+            </p>
+
+          </div>
+
+
+          <div class="cards">
+
+            <article class="card">
+
+              <div class="card-icon">
+                ♥
+              </div>
+
+              <h3>
+                Children & Families
+              </h3>
+
+              <p>
+
+                Supporting charitable activities intended
+                to benefit children and families in accordance
+                with the organization's purpose.
+
+              </p>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="card-icon">
+                ◎
+              </div>
+
+              <h3>
+                Community Engagement
+              </h3>
+
+              <p>
+
+                Connecting community members, volunteers,
+                supporters, and organizations around
+                charitable activities.
+
+              </p>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="card-icon">
+                ✦
+              </div>
+
+              <h3>
+                Opportunity & Support
+              </h3>
+
+              <p>
+
+                Developing opportunities that support the
+                organization's charitable purpose and
+                strengthen community participation.
+
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- WHO WE SERVE -->
+
+      <section class="serve">
+
+        <div class="container">
+
+          <div class="section-header">
+
+            <div class="section-kicker">
+              Community
+            </div>
+
+            <h2>
+              Who we aim to serve.
+            </h2>
+
+            <p class="section-intro">
+
+              Our charitable work is intended to be
+              community-oriented and focused on children.
+              As specific programs are established,
+              eligibility and service information will
+              be published here.
+
+            </p>
+
+          </div>
+
+
+          <div class="serve-grid">
+
+            <article class="serve-card">
+
+              <div class="serve-number">
+                01
+              </div>
+
+              <h3>
+                Children
+              </h3>
+
+              <p>
+
+                Children are central to the organization's
+                stated focus and charitable purpose.
+
+              </p>
+
+            </article>
+
+
+            <article class="serve-card">
+
+              <div class="serve-number">
+                02
+              </div>
+
+              <h3>
+                Families
+              </h3>
+
+              <p>
+
+                Families and caregivers may be part of
+                community-oriented activities associated
+                with the organization's work.
+
+              </p>
+
+            </article>
+
+
+            <article class="serve-card">
+
+              <div class="serve-number">
+                03
+              </div>
+
+              <h3>
+                Community
+              </h3>
+
+              <p>
+
+                Supporters, volunteers, partners, and
+                community members can participate in
+                advancing the organization's mission.
+
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- IMPACT -->
+
+      <section class="impact">
+
+        <div class="container">
+
+          <div class="section-header center">
+
+            <div class="section-kicker">
+              Accountability
+            </div>
+
+            <h2>
+              Impact should be clear and measurable.
+            </h2>
+
+            <p class="section-intro">
+
+              We believe nonprofit supporters deserve
+              accurate information about the work an
+              organization performs and the resources
+              it uses.
+
+            </p>
+
+          </div>
+
+
+          <div class="impact-grid">
+
+            <article class="impact-card">
+
+              <div class="impact-icon">
+                ♥
+              </div>
+
+              <strong>
+                Mission-focused
+              </strong>
+
+              <p>
+
+                Activities should remain connected
+                to the organization's charitable purpose.
+
+              </p>
+
+            </article>
+
+
+            <article class="impact-card">
+
+              <div class="impact-icon">
+                ◇
+              </div>
+
+              <strong>
+                Responsible stewardship
+              </strong>
+
+              <p>
+
+                Organizational resources should be managed
+                responsibly and in accordance with applicable
+                nonprofit requirements.
+
+              </p>
+
+            </article>
+
+
+            <article class="impact-card">
+
+              <div class="impact-icon">
+                ↗
+              </div>
+
+              <strong>
+                Transparent communication
+              </strong>
+
+              <p>
+
+                Public information should help supporters
+                understand the organization and its work.
+
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- INVOLVED -->
+
+      <section class="involved">
+
+        <div class="container">
+
+          <div class="section-header">
+
+            <div class="section-kicker">
+              Take action
+            </div>
+
+            <h2>
+              Find your way to participate.
+            </h2>
+
+            <p class="section-intro">
+
+              There are several ways to connect with a
+              nonprofit organization: learn about its work,
+              volunteer, share its mission, or provide
+              financial support.
+
+            </p>
+
+          </div>
+
+
+          <div class="involved-grid">
+
+            <article class="involved-card">
+
+              <h3>
+                Volunteer
+              </h3>
+
+              <p>
+
+                Contact 2 DAYS KIDS to learn about current
+                volunteer opportunities and community
+                involvement.
+
+              </p>
+
+              <a
+                href="#volunteer"
+                class="btn"
+                onclick="navigate('volunteer')"
+              >
+                Volunteer With Us
+              </a>
+
+            </article>
+
+
+            <article class="involved-card orange">
+
+              <h3>
+                Support the Mission
+              </h3>
+
+              <p>
+
+                Financial contributions can help a nonprofit
+                pursue its charitable activities and serve
+                its community.
+
+              </p>
+
+              <a
+                href="#donate"
+                class="btn"
+                onclick="return trackConversion('#donate')"
+              >
+                Support 2 DAYS KIDS
+              </a>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- NEWS -->
+
+      <section class="news">
+
+        <div class="container">
+
+          <div class="section-header center">
+
+            <div class="section-kicker">
+              Updates
+            </div>
+
+            <h2>
+              News & community updates.
+            </h2>
+
+            <p class="section-intro">
+
+              This section can be used for verified
+              organizational announcements, upcoming
+              activities, community events, and reports.
+
+            </p>
+
+          </div>
+
+
+          <div class="news-grid">
+
+            <article class="news-card">
+
+              <div class="news-image"></div>
+
+              <div class="news-content">
+
+                <div class="news-label">
+                  Organization
+                </div>
+
+                <h3>
+                  Welcome to 2 DAYS KIDS
+                </h3>
+
+                <p>
+
+                  Our website provides a central place
+                  for the community to learn about
+                  2 DAYS KIDS and connect with the
+                  organization.
+
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article class="news-card">
+
+              <div class="news-image"></div>
+
+              <div class="news-content">
+
+                <div class="news-label">
+                  Community
+                </div>
+
+                <h3>
+                  Community involvement
+                </h3>
+
+                <p>
+
+                  Volunteer opportunities, events, and
+                  community activities can be published
+                  here as they become available.
+
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article class="news-card">
+
+              <div class="news-image"></div>
+
+              <div class="news-content">
+
+                <div class="news-label">
+                  Transparency
+                </div>
+
+                <h3>
+                  Reports & updates
+                </h3>
+
+                <p>
+
+                  Verified reports, organizational updates,
+                  and appropriate public information can
+                  be added here.
+
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- FAQ -->
+
+      <section class="faq">
+
+        <div class="container">
+
+          <div class="section-header center">
+
+            <div class="section-kicker">
+              Frequently asked questions
+            </div>
+
+            <h2>
+              Questions about 2 DAYS KIDS?
+            </h2>
+
+          </div>
+
+
+          <div class="faq-list">
+
+            <details>
+
+              <summary>
+                What is 2 DAYS KIDS?
+              </summary>
+
+              <p>
+
+                2 DAYS KIDS is a nonprofit organization
+                located in Plano, Texas. The organization's
+                EIN is 47-1837827.
+
+              </p>
+
+            </details>
+
+
+            <details>
+
+              <summary>
+                Where is 2 DAYS KIDS located?
+              </summary>
+
+              <p>
+
+                2 DAYS KIDS is located at
+                2600 K Ave Ste 132, Plano, Texas 75074.
+
+              </p>
+
+            </details>
+
+
+            <details>
+
+              <summary>
+                How can I get involved?
+              </summary>
+
+              <p>
+
+                You can contact the organization to ask
+                about current volunteer opportunities,
+                partnerships, community involvement,
+                and other ways to participate.
+
+              </p>
+
+            </details>
+
+
+            <details>
+
+              <summary>
+                How can I support 2 DAYS KIDS?
+              </summary>
+
+              <p>
+
+                Financial support can be provided through
+                the organization's official donation
+                processor once the verified donation
+                destination has been connected to this website.
+
+              </p>
+
+            </details>
+
+
+            <details>
+
+              <summary>
+                How can I contact the organization?
+              </summary>
+
+              <p>
+
+                The organization's mailing address is
+                2600 K Ave Ste 132, Plano, TX 75074.
+                Use the Contact page for the organization's
+                current official communication channels.
+
+              </p>
+
+            </details>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- CONTACT PREVIEW -->
+
+      <section class="contact">
+
+        <div class="container contact-grid">
+
+          <div>
+
+            <div class="section-kicker">
+              Contact
+            </div>
+
+            <h2>
+              Connect with 2 DAYS KIDS.
+            </h2>
+
+            <p class="section-intro">
+
+              Questions, volunteer inquiries, partnerships,
+              and general organizational questions are
+              welcome.
+
+            </p>
+
+            <br>
+
+            <a
+              href="#contact"
+              class="btn btn-primary"
+              onclick="navigate('contact')"
+            >
+              Contact Us
+            </a>
+
+          </div>
+
+
+          <div class="contact-details">
+
+            <div class="contact-item">
+
+              <small>
+                Organization
+              </small>
+
+              <strong>
+                2 DAYS KIDS
+              </strong>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <small>
+                EIN
+              </small>
+
+              <strong>
+                47-1837827
+              </strong>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <small>
+                Address
+              </small>
+
+              <strong>
+
+                2600 K Ave Ste 132<br>
+                Plano, TX 75074
+
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- ========================================================
+         ABOUT PAGE
+         ======================================================== -->
+
+    <div
+      class="site-page"
+      id="page-about"
+    >
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <div class="section-kicker">
+            About 2 DAYS KIDS
+          </div>
+
+          <h1>
+            Who we are.
+          </h1>
+
+          <p>
+
+            Learn about 2 DAYS KIDS, our organizational
+            identity, charitable focus, and commitment
+            to clear public communication.
+
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <article class="article">
+
+        <h2>
+          About 2 DAYS KIDS
+        </h2>
+
+        <p>
+
+          2 DAYS KIDS is a nonprofit organization based
+          in Plano, Texas. The organization's EIN is
+          47-1837827.
+
+        </p>
+
+        <p>
+
+          The purpose of this website is to provide a
+          clear, accessible source of information about
+          the organization and its charitable activities.
+
+        </p>
+
+
+        <h2>
+          Our organizational focus
+        </h2>
+
+        <p>
+
+          2 DAYS KIDS is focused on charitable work involving
+          children and community support. Specific programs,
+          services, eligibility requirements, and impact
+          information should be published as they are
+          established and verified by the organization.
+
+        </p>
+
+
+        <h2>
+          Our approach
+        </h2>
+
+        <ul>
+
+          <li>
+            Keep the organization's charitable purpose
+            at the center of our activities.
+          </li>
+
+          <li>
+            Communicate clearly with supporters and
+            community members.
+          </li>
+
+          <li>
+            Encourage responsible community participation.
+          </li>
+
+          <li>
+            Provide accurate organizational information.
+          </li>
+
+        </ul>
+
+
+        <h2>
+          Organization information
+        </h2>
+
+        <p>
+
+          <strong>
+            2 DAYS KIDS
+          </strong><br>
+
+          EIN: 47-1837827<br>
+
+          2600 K Ave Ste 132<br>
+
+          Plano, Texas 75074
+
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <!-- ========================================================
+         MISSION PAGE
+         ======================================================== -->
+
+    <div
+      class="site-page"
+      id="page-mission"
+    >
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <div class="section-kicker">
+            Our mission
+          </div>
+
+          <h1>
+            Children. Community. Opportunity.
+          </h1>
+
+          <p>
+
+            Our public mission is centered on charitable
+            work involving children and community support.
+
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <article class="article">
+
+        <h2>
+          Our purpose
+        </h2>
+
+        <p>
+
+          2 DAYS KIDS exists as a nonprofit organization
+          to pursue its charitable purpose and contribute
+          positively to children and the wider community.
+
+        </p>
+
+        <p>
+
+          Our work is intended to be mission-focused,
+          community-oriented, and responsibly managed.
+
+        </p>
+
+
+        <h2>
+          Why this matters
+        </h2>
+
+        <p>
+
+          Children and families benefit when communities
+          work together to create meaningful opportunities
+          and provide appropriate support.
+
+        </p>
+
+
+        <h2>
+          Our commitment
+        </h2>
+
+        <ul>
+
+          <li>
+            Mission-focused charitable activities.
+          </li>
+
+          <li>
+            Responsible organizational stewardship.
+          </li>
+
+          <li>
+            Respectful treatment of the communities we serve.
+          </li>
+
+          <li>
+            Clear communication with supporters.
+          </li>
+
+          <li>
+            Continuous improvement of our programs.
+          </li>
+
+        </ul>
+
+
+        <h2>
+          Official mission statement
+        </h2>
+
+        <p>
+
+          The organization's board or authorized leadership
+          should replace this section with the official
+          adopted mission statement before publication.
+
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <!-- ========================================================
+         PROGRAMS PAGE
+         ======================================================== -->
+
+    <div
+      class="site-page"
+      id="page-programs"
+    >
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <div class="section-kicker">
+            Programs
+          </div>
+
+          <h1>
+            What we do.
+          </h1>
+
+          <p>
+
+            Learn about the areas of work connected to
+            the organization's charitable purpose.
+
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <section class="programs">
+
+        <div class="container">
+
+          <div class="cards">
+
+            <article class="card">
+
+              <div class="card-icon">
+                ♥
+              </div>
+
+              <h3>
+                Children & Families
+              </h3>
+
+              <p>
+
+                Charitable activities focused on supporting
+                children and families.
+
+              </p>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="card-icon">
+                ◎
+              </div>
+
+              <h3>
+                Community Engagement
+              </h3>
+
+              <p>
+
+                Community-oriented activities that connect
+                volunteers, supporters, and community members.
+
+              </p>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="card-icon">
+                ✦
+              </div>
+
+              <h3>
+                Opportunity
+              </h3>
+
+              <p>
+
+                Activities designed to create meaningful
+                opportunities consistent with the
+                organization's charitable purpose.
+
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- ========================================================
+         IMPACT PAGE
+         ======================================================== -->
+
+    <div
+      class="site-page"
+      id="page-impact"
+    >
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <div class="section-kicker">
+            Our impact
+          </div>
+
+          <h1>
+            Measure what matters.
+          </h1>
+
+          <p>
+
+            Impact information should be accurate,
+            measurable, and supported by organizational
+            records.
+
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <article class="article">
+
+        <h2>
+          Why we measure impact
+        </h2>
+
+        <p>
+
+          Measuring outcomes helps nonprofit organizations
+          understand whether their programs are achieving
+          their intended purposes and helps supporters
+          understand the work they are supporting.
+
+        </p>
+
+
+        <h2>
+          Impact reporting
+        </h2>
+
+        <p>
+
+          This page is designed to publish verified
+          information such as:
+
+        </p>
+
+        <ul>
+
+          <li>
+            Number of people served.
+          </li>
+
+          <li>
+            Number of programs delivered.
+          </li>
+
+          <li>
+            Volunteer participation.
+          </li>
+
+          <li>
+            Community partnerships.
+          </li>
+
+          <li>
+            Annual program outcomes.
+          </li>
+
+        </ul>
+
+
+        <p>
+
+          Actual statistics should only be added after
+          they have been verified by 2 DAYS KIDS.
+
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <!-- ========================================================
+         INVOLVED PAGE
+         ======================================================== -->
+
+    <div
+      class="site-page"
+      id="page-involved"
+    >
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <div class="section-kicker">
+            Get involved
+          </div>
+
+          <h1>
+            Join the community.
+          </h1>
+
+          <p>
+
+            Learn about ways you can support the work
+            of 2 DAYS KIDS.
+
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <section>
+
+        <div class="container">
+
+          <div class="cards">
+
+            <article class="card">
+
+              <div class="card-icon">
+                ♥
+              </div>
+
+              <h3>
+                Donate
+              </h3>
+
+              <p>
+
+                Make a financial contribution through
+                the organization's official donation
+                processor.
+
+              </p>
+
+              <br>
+
+              <a
+                href="#donate"
+                class="btn btn-primary"
+                onclick="return trackConversion('#donate')"
+              >
+                Donate
+              </a>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="card-icon">
+                ♧
+              </div>
+
+              <h3>
+                Volunteer
+              </h3>
+
+              <p>
+
+                Contact the organization to learn about
+                current volunteer opportunities.
+
+              </p>
+
+              <br>
+
+              <a
+                href="#volunteer"
+                class="btn btn-primary"
+                onclick="navigate('volunteer')"
+              >
+                Volunteer
+              </a>
+
+            </article>
+
+
+            <article class="card">
+
+              <div class="card-icon">
+                ↗
+              </div>
+
+              <h3>
+                Share
+              </h3>
+
+              <p>
+
+                Help others discover the organization's
+                mission and charitable activities.
+
+              </p>
+
+              <br>
+
+              <button
+                class="btn btn-primary"
+                onclick="shareWebsite()"
+              >
+                Share
+              </button>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- ========================================================
+         VOLUNTEER PAGE
+         ======================================================== -->
+
+    <div
+      class="site-page"
+      id="page-volunteer"
+    >
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <div class="section-kicker">
+            Volunteer
+          </div>
+
+          <h1>
+            Give your time.
+          </h1>
+
+          <p>
+
+            Community participation helps nonprofit
+            organizations advance their charitable work.
+
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <article class="article">
+
+        <h2>
+          Volunteer with 2 DAYS KIDS
+        </h2>
+
+        <p>
+
+          We welcome people who are interested in learning
+          more about opportunities to support the organization's
+          charitable mission.
+
+        </p>
+
+        <h2>
+          Potential areas of involvement
+        </h2>
+
+        <ul>
+
+          <li>
+            Community activities.
+          </li>
+
+          <li>
+            Event support.
+          </li>
+
+          <li>
+            Outreach and awareness.
+          </li>
+
+          <li>
+            Administrative support.
+          </li>
+
+          <li>
+            Other activities approved by the organization.
+
+          </li>
+
+        </ul>
+
+        <p>
+
+          Current volunteer openings, requirements,
+          schedules, and application procedures should
+          be confirmed directly with 2 DAYS KIDS.
+
+        </p>
+
+
+        <a
+          href="#contact"
+          class="btn btn-primary"
+          onclick="navigate('contact')"
+        >
+          Contact Us About Volunteering
+        </a>
+
+      </article>
+
+    </div>
+
+
+    <!-- ========================================================
+         DONATE PAGE
+         ======================================================== -->
+
+    <div
+      class="site-page"
+      id="page-donate"
+    >
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <div class="section-kicker">
+            Donate
+          </div>
+
+          <h1>
+            Support our charitable work.
+          </h1>
+
+          <p>
+
+            Your support can help 2 DAYS KIDS pursue
+            its charitable mission.
+
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <section class="donate">
+
+        <div class="container">
+
+          <div class="donate-box">
+
+            <div>
+
+              <div class="section-kicker">
+                Make a contribution
+              </div>
+
+              <h2>
+                Help move the mission forward.
+              </h2>
+
+              <p>
+
+                Contributions should be processed through
+                the organization's official secure donation
+                provider.
+
+              </p>
+
+              <!--
+                IMPORTANT:
+                Replace this URL with the actual verified
+                donation processor before publishing.
+              -->
+
+              <a
+                href="YOUR-SECURE-DONATION-URL"
+                class="btn btn-primary"
+                onclick="return gtag_report_conversion(this.href)"
+              >
+                Donate Securely
+              </a>
+
+            </div>
+
+
+            <div class="donation-benefits">
+
+              <div class="donation-benefit">
+
+                <span>♥</span>
+
+                <div>
+
+                  <strong>
+                    Support charitable activities
+                  </strong>
+
+                  <span>
+                    Contributions can help support
+                    mission-related work.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="donation-benefit">
+
+                <span>✓</span>
+
+                <div>
+
+                  <strong>
+                    Secure donation process
+                  </strong>
+
+                  <span>
+                    Use the organization's verified
+                    secure payment processor.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="donation-benefit">
+
+                <span>◎</span>
+
+                <div>
+
+                  <strong>
+                    Responsible stewardship
+                  </strong>
+
+                  <span>
+                    Funds should be used in accordance
+                    with the organization's charitable purpose.
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- ========================================================
+         TRANSPARENCY PAGE
+         ======================================================== -->
+
+    <div
+      class="site-page"
+      id="page-transparency"
+    >
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <div class="section-kicker">
+            Transparency
+          </div>
+
+          <h1>
+            Know who we are.
+          </h1>
+
+          <p>
+
+            Important organizational information should
+            be easy for supporters and community members
+            to find.
+
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <section class="transparency">
+
+        <div class="container transparency-grid">
+
+          <div class="info-box">
+
+            <h3>
+              Organization details
+            </h3>
+
+            <div class="info-row">
+              <span>Name</span>
+              <strong>2 DAYS KIDS</strong>
+            </div>
+
+            <div class="info-row">
+              <span>EIN</span>
+              <strong>47-1837827</strong>
+            </div>
+
+            <div class="info-row">
+              <span>Street</span>
+              <strong>2600 K Ave Ste 132</strong>
+            </div>
+
+            <div class="info-row">
+              <span>City</span>
+              <strong>Plano</strong>
+            </div>
+
+            <div class="info-row">
+              <span>State</span>
+              <strong>Texas</strong>
+            </div>
+
+            <div class="info-row">
+              <span>ZIP</span>
+              <strong>75074</strong>
+            </div>
+
+          </div>
+
+
+          <div class="info-box">
+
+            <h3>
+              Public documents
+            </h3>
+
+            <p style="color:var(--muted);">
+
+              As applicable, this area can contain links
+              to verified organizational documents such
+              as annual reports, financial reports,
+              governing documents, and other appropriate
+              public information.
+
+            </p>
+
+            <br>
+
+            <p style="color:var(--muted);">
+
+              Only documents officially approved for public
+              distribution should be published here.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- ========================================================
+         CONTACT PAGE
+         ======================================================== -->
+
+    <div
+      class="site-page"
+      id="page-contact"
+    >
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <div class="section-kicker">
+            Contact
+          </div>
+
+          <h1>
+            Let's connect.
+          </h1>
+
+          <p>
+
+            Reach out regarding our organization,
+            volunteering, partnerships, donations,
+            or general inquiries.
+
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <section class="contact">
+
+        <div class="container contact-grid">
+
+          <div>
+
+            <div class="section-kicker">
+              Organization information
+            </div>
+
+            <h2>
+              Contact 2 DAYS KIDS.
+            </h2>
+
+            <p class="section-intro">
+
+              Please use the organization's current
+              official contact channels.
+
+            </p>
+
+            <br>
+
+
+            <div class="contact-details">
+
+              <div class="contact-item">
+
+                <small>
+                  Organization
+                </small>
+
+                <strong>
+                  2 DAYS KIDS
+                </strong>
+
+              </div>
+
+
+              <div class="contact-item">
+
+                <small>
+                  EIN
+                </small>
+
+                <strong>
+                  47-1837827
+                </strong>
+
+              </div>
+
+
+              <div class="contact-item">
+
+                <small>
+                  Mailing address
+                </small>
+
+                <strong>
+
+                  2600 K Ave Ste 132<br>
+                  Plano, TX 75074
+
+                </strong>
+
+              </div>
+
+
+              <div class="contact-item">
+
+                <small>
+                  Email
+                </small>
+
+                <strong>
+                  Replace with official organization email
+                </strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-form">
+
+            <form
+              id="contactForm"
+              onsubmit="submitContact(event)"
+            >
+
+              <div class="form-grid">
+
+                <div class="field">
+
+                  <label for="name">
+                    Name
+                  </label>
+
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="field">
+
+                  <label for="email">
+                    Email
+                  </label>
+
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="field full">
+
+                  <label for="reason">
+                    Reason for contacting us
+                  </label>
+
+                  <select
+                    id="reason"
+                    name="reason"
+                  >
+
+                    <option>
+                      General inquiry
+                    </option>
+
+                    <option>
+                      Volunteer
+                    </option>
+
+                    <option>
+                      Partnership
+                    </option>
+
+                    <option>
+                      Donation
+                    </option>
+
+                    <option>
+                      Community
+                    </option>
+
+                  </select>
+
+                </div>
+
+
+                <div class="field full">
+
+                  <label for="message">
+                    Message
+                  </label>
+
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                  ></textarea>
+
+                </div>
+
+              </div>
+
+
+              <button
+                class="btn btn-primary"
+                type="submit"
+              >
+                Send Message
+              </button>
+
+
+              <p
+                id="formMessage"
+                style="
+                  display:none;
+                  margin-top:15px;
+                  color:#12372A;
+                  font-weight:700;
+                  font-size:13px;
+                "
+              ></p>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- ========================================================
+         PRIVACY
+         ======================================================== -->
+
+    <div
+      class="site-page"
+      id="page-privacy"
+    >
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <div class="section-kicker">
+            Legal
+          </div>
+
+          <h1>
+            Privacy Policy
+          </h1>
+
+          <p>
+            Information about website privacy.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <article class="article">
+
+        <h2>
+          Overview
+        </h2>
+
+        <p>
+
+          2 DAYS KIDS respects the privacy of visitors
+          to this website.
+
+        </p>
+
+
+        <h2>
+          Analytics and advertising measurement
+        </h2>
+
+        <p>
+
+          This website uses Google measurement and
+          advertising technologies to understand website
+          activity and measure conversions.
+
+        </p>
+
+        <p>
+
+          These technologies may use cookies or similar
+          technologies depending on browser settings and
+          applicable Google policies.
+
+        </p>
+
+
+        <h2>
+          Contact information
+        </h2>
+
+        <p>
+
+          Information submitted through a website contact
+          form may be used to respond to the request.
+
+        </p>
+
+
+        <h2>
+          Third-party services
+        </h2>
+
+        <p>
+
+          Payment processors, analytics providers,
+          hosting companies, email providers, and other
+          third-party services may maintain separate
+          privacy policies.
+
+        </p>
+
+
+        <h2>
+          Updates
+        </h2>
+
+        <p>
+
+          This policy should be reviewed by the organization
+          and updated whenever its technology, services,
+          data practices, or applicable legal requirements
+          change.
+
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <!-- ========================================================
+         TERMS
+         ======================================================== -->
+
+    <div
+      class="site-page"
+      id="page-terms"
+    >
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <div class="section-kicker">
+            Legal
+          </div>
+
+          <h1>
+            Terms of Use
+          </h1>
+
+          <p>
+            Terms governing use of this website.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <article class="article">
+
+        <h2>
+          Website information
+        </h2>
+
+        <p>
+
+          Information published on this website is provided
+          for general informational purposes.
+
+        </p>
+
+
+        <h2>
+          Accuracy
+        </h2>
+
+        <p>
+
+          2 DAYS KIDS should make reasonable efforts to
+          keep organizational information current and accurate.
+
+        </p>
+
+
+        <h2>
+          External websites
+        </h2>
+
+        <p>
+
+          This website may link to third-party websites.
+          Those websites operate under their own terms
+          and privacy policies.
+
+        </p>
+
+
+        <h2>
+          Donations
+        </h2>
+
+        <p>
+
+          Donations should be made only through the official
+          donation destination published by 2 DAYS KIDS.
+
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <!-- ========================================================
+         ACCESSIBILITY
+         ======================================================== -->
+
+    <div
+      class="site-page"
+      id="page-accessibility"
+    >
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <div class="section-kicker">
+            Accessibility
+          </div>
+
+          <h1>
+            Accessibility statement.
+          </h1>
+
+          <p>
+            Our goal is to make this website accessible to everyone.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <article class="article">
+
+        <h2>
+          Our commitment
+        </h2>
+
+        <p>
+
+          2 DAYS KIDS aims to provide a website that can
+          be used by people with different abilities and
+          assistive technologies.
+
+        </p>
+
+
+        <h2>
+          Accessibility features
+        </h2>
+
+        <ul>
+
+          <li>
+            Responsive mobile layout.
+          </li>
+
+          <li>
+            Keyboard-accessible navigation.
+          </li>
+
+          <li>
+            Skip navigation link.
+          </li>
+
+          <li>
+            Semantic headings and landmarks.
+          </li>
+
+          <li>
+            Accessible form labels.
+          </li>
+
+          <li>
+            High-contrast interface elements.
+
+          </li>
+
+        </ul>
+
+
+        <h2>
+          Accessibility feedback
+        </h2>
+
+        <p>
+
+          If you experience an accessibility problem,
+          please contact 2 DAYS KIDS using its official
+          communication channels.
+
+        </p>
+
+      </article>
+
+    </div>
+
+
+  </main>
+
+
+  <!-- ==========================================================
+       FOOTER
+       ========================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div>
+
+          <div
+            class="brand"
+            style="color:white;margin-bottom:18px;"
+          >
+
+            <span class="brand-symbol">
+              2D
+            </span>
+
+            <span class="brand-name">
+              2 DAYS KIDS
+            </span>
+
+          </div>
+
+
+          <p>
+
+            2 DAYS KIDS is a nonprofit organization
+            based in Plano, Texas.
+
+          </p>
+
+          <br>
+
+          <p>
+
+            Our website provides information about
+            our organization, charitable purpose,
+            community involvement, and ways to
+            connect with our work.
+
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Organization
+          </h3>
+
+          <ul class="footer-links">
+
+            <li>
+              <a
+                href="#about"
+                onclick="navigate('about')"
+              >
+                About
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#mission"
+                onclick="navigate('mission')"
+              >
+                Mission
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#programs"
+                onclick="navigate('programs')"
+              >
+                Programs
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#impact"
+                onclick="navigate('impact')"
+              >
+                Impact
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Get involved
+          </h3>
+
+          <ul class="footer-links">
+
+            <li>
+              <a
+                href="#involved"
+                onclick="navigate('involved')"
+              >
+                Get Involved
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#volunteer"
+                onclick="navigate('volunteer')"
+              >
+                Volunteer
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#donate"
+                onclick="return trackConversion('#donate')"
+              >
+                Donate
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#contact"
+                onclick="navigate('contact')"
+              >
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Organization information
+          </h3>
+
+          <p>
+
+            <strong style="color:white;">
+              2 DAYS KIDS
+            </strong>
+
+            <br>
+
+            EIN: 47-1837827
+
+            <br><br>
+
+            2600 K Ave Ste 132
+
+            <br>
+
+            Plano, TX 75074
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+
+          ©
+          <span id="year"></span>
+          2 DAYS KIDS.
+          All rights reserved.
+
+        </span>
+
+
+        <span>
+
+          <a
+            href="#privacy"
+            onclick="navigate('privacy')"
+          >
+            Privacy Policy
+          </a>
+
+          &nbsp; · &nbsp;
+
+          <a
+            href="#terms"
+            onclick="navigate('terms')"
+          >
+            Terms
+          </a>
+
+          &nbsp; · &nbsp;
+
+          <a
+            href="#accessibility"
+            onclick="navigate('accessibility')"
+          >
+            Accessibility
+          </a>
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ==========================================================
+       JAVASCRIPT
+       ========================================================== -->
+
+  <script>
+
+    const pages = [
+      "home",
+      "about",
+      "mission",
+      "programs",
+      "impact",
+      "involved",
+      "volunteer",
+      "donate",
+      "transparency",
+      "contact",
+      "privacy",
+      "terms",
+      "accessibility"
+    ];
+
+
+    /* ==========================================================
+       NAVIGATION
+       ========================================================== */
+
+    function navigate(page) {
+
+      if (!pages.includes(page)) {
+        page = "home";
+      }
+
+      document
+        .querySelectorAll(".site-page")
+        .forEach(function(element) {
+
+          element.classList.remove("active");
+
+        });
+
+
+      const target =
+        document.getElementById(
+          "page-" + page
+        );
+
+
+      if (target) {
+        target.classList.add("active");
+      }
+
+
+      window.location.hash = page;
+
+
+      closeMenu();
+
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+
+      /* Google Analytics / Ads virtual page view */
+
+      if (typeof gtag === "function") {
+
+        gtag("event", "page_view", {
+
+          page_title:
+            "2 DAYS KIDS - " +
+            page,
+
+          page_location:
+            window.location.href,
+
+          page_path:
+            "/" + page
+
+        });
+
+      }
+
+    }
+
+
+    /* ==========================================================
+       INITIAL ROUTING
+       ========================================================== */
+
+    function loadRoute() {
+
+      let page =
+        window.location.hash
+          .replace("#", "");
+
+      if (!pages.includes(page)) {
+        page = "home";
+      }
+
+      navigate(page);
+
+    }
+
+
+    window.addEventListener(
+      "hashchange",
+      loadRoute
+    );
+
+
+    /* ==========================================================
+       MOBILE MENU
+       ========================================================== */
+
+    function toggleMenu() {
+
+      const nav =
+        document.getElementById(
+          "navLinks"
+        );
+
+      const button =
+        document.querySelector(
+          ".menu-toggle"
+        );
+
+
+      const isOpen =
+        nav.classList.toggle("open");
+
+
+      button.setAttribute(
+        "aria-expanded",
+        isOpen
+          ? "true"
+          : "false"
+      );
+
+    }
+
+
+    function closeMenu() {
+
+      const nav =
+        document.getElementById(
+          "navLinks"
+        );
+
+      const button =
+        document.querySelector(
+          ".menu-toggle"
+        );
+
+
+      nav.classList.remove(
+        "open"
+      );
+
+      button.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    }
+
+
+    /* ==========================================================
+       GOOGLE ADS CONVERSION
+       ========================================================== */
+
+    function trackConversion(destination) {
+
+      if (typeof gtag !== "function") {
+
+        if (destination) {
+          window.location.href =
+            destination;
+        }
+
+        return false;
+
+      }
+
+
+      return gtag_report_conversion(
+        destination
+      );
+
+    }
+
+
+    /* ==========================================================
+       CONTACT FORM
+       ========================================================== */
+
+    function submitContact(event) {
+
+      event.preventDefault();
+
+
+      const message =
+        document.getElementById(
+          "formMessage"
+        );
+
+
+      message.style.display =
+        "block";
+
+
+      message.textContent =
+        "Thank you. Your message form is ready to connect to the organization's official email or form-processing service.";
+
+
+      if (typeof gtag === "function") {
+
+        gtag(
+          "event",
+          "generate_lead",
+          {
+
+            event_category:
+              "contact",
+
+            event_label:
+              "contact_form"
+
+          }
+        );
+
+      }
+
+    }
+
+
+    /* ==========================================================
+       WEBSITE SHARING
+       ========================================================== */
+
+    function shareWebsite() {
+
+      const data = {
+
+        title:
+          "2 DAYS KIDS",
+
+        text:
+          "Learn about 2 DAYS KIDS and its nonprofit mission.",
+
+        url:
+          window.location.href
+
+      };
+
+
+      if (
+        navigator.share
+      ) {
+
+        navigator.share(
+          data
+        );
+
+      } else if (
+        navigator.clipboard
+      ) {
+
+        navigator.clipboard
+          .writeText(
+            window.location.href
+          );
+
+        alert(
+          "Website link copied."
+        );
+
+      }
+
+    }
+
+
+    /* ==========================================================
+       YEAR
+       ========================================================== */
+
+    document.getElementById(
+      "year"
+    ).textContent =
+      new Date().getFullYear();
+
+
+    /* ==========================================================
+       START
+       ========================================================== */
+
+    loadRoute();
+
+  </script>
+
+</body>
+</html>
